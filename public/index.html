@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/src/tailwind.css">
 </head>
 <body>
     <header>
@@ -49,11 +50,48 @@
                 <button type="button" class="copy-link-button">
                   <span class="material-icons">copy</span>
                 </button>
-              </div>
+            </div>
+            
+            <p>
+                c.	In here you can later create your own objects for your website. 
+            </p>
         </div>
-        <div id="4"></div>
-        <div id="5"></div>
-        <div id="6"></div>
+        <div id="4">
+            <p>Package.json</p>
+            <p>
+                a. Go into your .json file and scroll down to "scripts"
+                b. Delete what's after and copy this: 
+                <pre>
+                    <code>
+                        "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./public/style.css"
+                    </code>
+                </pre>
+                c. Npx is almost the same as npm. With npm you run a command and it directly executes. With npx you must run the command in the terminal after you specified what it must do. 
+                d. What this command does is that it installs the latest package of tailwindcss-cli and compiles the tailwind.css file in the src folder. After that it saves the output (-o) in the style.css file in the public folder. 
+            </p>
+        </div>
+        <div id="5">
+            <p>Run the npx command</p>
+            <p>
+                a.	Open your terminal again and make sure you are in the same direction as your package.json file. 
+                b.	Type: npm run dev. 
+                c.	I use dev because I “named” my command in the package.json file dev. If you used another name, you have to replace it. 
+                d.	Now open your output file. There should be round about 500 lines in it.
+            </p>
+        </div>
+        <div id="6">
+            <p>How to use Tailwind in my code</p>
+            <p>
+                1.	Now you can specify your own classes in the tailwind.css file to use them in your html or style.css code. I am going to explain later how exactly this works but first we have to make something else that is going to make the work with tailwind easier. 
+                2.	Tailwind config 
+                    a.	Type this command in the terminal: npx tailwindcss-cli@latest init
+                    b.	This command creates a config file. We need it because: 
+                    Every time you make a new css class in your tailwind.css file you would have to reenter the command from before that compiles the file and saves everything in the style.css file. To avoid that, we are going to automate that process. 
+                3.	Tailwind.config.js
+                    a. h
+
+            </p>
+        </div>
     </div>
 </body>
 </html>
