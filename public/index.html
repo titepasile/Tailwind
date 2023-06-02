@@ -7,13 +7,53 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>
+        <h1>Tailwind</h1>
+        <h3>What is it and how can I use it?</h3>
+    </header>
     <div class="my-grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="1">
+            <p>Setup</p>
+            <p>You don't have to use the exact same setup as I did. If you use another one you have to personalize the paths.</p>
+            <p>
+                a. Create two folders in you directory. 
+                b. Public folder with index.html and style.css file
+                c. Src folder with tailwind.css file
+            </p>
+        </div>
+        <div id="2">
+            <p>Package.json</p>
+            <p>
+                a.	Make sure you are not in one of the created folders.
+                b.	Open the terminal and type: npm init -y
+                c.	This command creates a package.json file in your directory.
+            </p>
+        </div>
+        <div id="3">
+            <p>Tailwind.css</p>
+            <p>a. Open your .css file in the src folder.</p>
+
+            <!--Code from: https://codepen.io/dcode-software/pen/eYMYXrK -->
+            <div class="copy-link">
+                <input type="text" class="copy-link-input" 
+                value="
+                @tailwind base;
+                @tailwind components;
+                
+                btn {
+                    @apply px-4 py-2 bg-blue-600 text white rounded; 
+                }
+                
+                @tailwind utilities;
+                " readonly>
+                <button type="button" class="copy-link-button">
+                  <span class="material-icons">copy</span>
+                </button>
+              </div>
+        </div>
+        <div id="4"></div>
+        <div id="5"></div>
+        <div id="6"></div>
     </div>
 </body>
 </html>
