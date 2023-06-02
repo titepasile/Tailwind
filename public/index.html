@@ -51,8 +51,29 @@
                 </button>
               </div>
         </div>
-        <div id="4"></div>
-        <div id="5"></div>
+        <div id="4">
+            <p>Package.json</p>
+            <p>
+                a. Go into your .json file and scroll down to "scripts"
+                b. Delete what's after and copy this: 
+                <pre>
+                    <code>
+                        "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./public/style.css"
+                    </code>
+                </pre>
+                c. Npx is almost the same as npm. With npm you run a command and it directly executes. With npx you must run the command in the terminal after you specified what it must do. 
+                d. What this command does is that it installs the latest package of tailwindcss-cli and compiles the tailwind.css file in the src folder. After that it saves the output (-o) in the style.css file in the public folder. 
+            </p>
+        </div>
+        <div id="5">
+            <p>Run the npx command</p>
+            <p>
+                a.	Open your terminal again and make sure you are in the same direction as your package.json file. 
+                b.	Type: npm run dev. 
+                c.	I use dev because I “named” my command in the package.json file dev. If you used another name, you have to replace it. 
+                d.	Now open your output file. There should be round about 500 lines in it.
+            </p>
+        </div>
         <div id="6"></div>
     </div>
 </body>
