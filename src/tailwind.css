@@ -4,28 +4,6 @@
 btn {
   @apply px-4 py-2 bg-blue-600 text white rounded; 
 }
-
-/*
-.grid{
-  display: flexbox;
-  flex-direction: row;
-  color: #000000;
-  background-color: rgb(113, 66, 101);
-  border: 0.2rem solid black;
-  margin: 1rem;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.my-div{
-  @apply bg-red-300;
-}
-
-.topic{
-  margin: 0.1rem;
-}
-*/
-
 /* style.css */
 
 /* Global styles */
@@ -77,6 +55,7 @@ header {
 /* Context styles */
 .context {
   margin-top: 0;
+  padding-left: 1rem;
 } 
 
 @tailwind utilities;
