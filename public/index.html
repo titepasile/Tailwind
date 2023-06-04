@@ -6,87 +6,82 @@
     <title>Tailwind</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="/src/tailwind.css">
+    <link rel="stylesheet" href="https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons&icon.query=copy">
+    <script src="app.js"></script> 
 </head>
+
 <body>
     <header>
         <h1>Tailwind</h1>
         <h3>What is it and how can I use it?</h3>
     </header>
-    <div class="my-grid">
-        <div id="1">
-            <p>Setup</p>
-            <p>You don't have to use the exact same setup as I did. If you use another one you have to personalize the paths.</p>
-            <p>
-                a. Create two folders in you directory. 
-                b. Public folder with index.html and style.css file
-                c. Src folder with tailwind.css file
+    <div class="grid">
+        <div class="my-div">
+            <p class="topic">1 Setup</p>
+            <p class="subtitle">You don't have to use the exact same setup as I did. If you use another one you have to personalize the paths.</p>
+            <p class="context">
+                a. Create two folders in you directory. <br>
+                b. Public folder with index.html and style.css file <br>
+                c. Src folder with tailwind.css file <br>
             </p>
         </div>
-        <div id="2">
-            <p>Package.json</p>
-            <p>
+        <div class="my-div">
+            <p class="topic">2 Package.json</p>
+            <pclass="context">
                 a.	Make sure you are not in one of the created folders.
                 b.	Open the terminal and type: npm init -y
                 c.	This command creates a package.json file in your directory.
             </p>
         </div>
-        <div id="3">
-            <p>Tailwind.css</p>
+        <div class="my-div">
+            <p class="topic">3 Tailwind.css</p>
             <p>a. Open your .css file in the src folder.</p>
-
-            <!--Code from: https://codepen.io/dcode-software/pen/eYMYXrK -->
-            <div class="copy-link">
-                <input type="text" class="copy-link-input" 
-                value="
-                @tailwind base;
-                @tailwind components;
-                
-                btn {
-                    @apply px-4 py-2 bg-blue-600 text white rounded; 
-                }
-                
-                @tailwind utilities;
-                " readonly>
-                <button type="button" class="copy-link-button">
-                  <span class="material-icons">copy</span>
-                </button>
-            </div>
-            
+            <p>b. Copy the folowing code into the .css file:</p>
+            <code>
+                @tailwind base; <br>
+                @tailwind components; <br>
+                <br>
+                btn { <br>
+                    @apply px-4 py-2 bg-blue-600 text white rounded; <br>
+                } <br>
+                <br>
+                @tailwind utilities;<br>
+            </code>
+                <br>          
             <p>
                 c.	In here you can later create your own objects for your website. 
             </p>
         </div>
-        <div id="4">
-            <p>Package.json</p>
-            <p>
+        <div class="my-div">
+            <p class="topic">4 Package.json</p>
+            <p class="context">
                 a. Go into your .json file and scroll down to "scripts"
-                b. Delete what's after and copy this: 
-                <pre>
-                    <code>
-                        "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./public/style.css"
-                    </code>
-                </pre>
+                b. Delete what's after and copy this: <br> 
+                <code>
+                    "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./public/style.css" <br>
+                </code>
+                <br>
                 c. Npx is almost the same as npm. With npm you run a command and it directly executes. With npx you must run the command in the terminal after you specified what it must do. 
                 d. What this command does is that it installs the latest package of tailwindcss-cli and compiles the tailwind.css file in the src folder. After that it saves the output (-o) in the style.css file in the public folder. 
             </p>
         </div>
-        <div id="5">
-            <p>Run the npx command</p>
-            <p>
+        <div class="my-div">
+            <p class="topic">5 Run the npx command</p>
+            <p class="context">
                 a.	Open your terminal again and make sure you are in the same direction as your package.json file. 
                 b.	Type: npm run dev. 
                 c.	I use dev because I “named” my command in the package.json file dev. If you used another name, you have to replace it. 
                 d.	Now open your output file. There should be round about 500 lines in it.
             </p>
         </div>
-        <div id="6">
-            <p>How to use Tailwind in my code</p>
-            <p>
+        <div class="my-div">
+            <p class="topic">6 How to use Tailwind in my code</p>
+            <p class="context">
                 1.	Now you can specify your own classes in the tailwind.css file to use them in your html or style.css code. I am going to explain later how exactly this works but first we have to make something else that is going to make the work with tailwind easier. 
                 2.	Tailwind config 
                     a.	Type this command in the terminal: npx tailwindcss-cli@latest init
                     b.	This command creates a config file. We need it because: 
-                    Every time you make a new css class in your tailwind.css file you would have to reenter the command from before that compiles the file and saves everything in the style.css file. To avoid that, we are going to automate that process. 
+                    Every time you build to make a new css class in your tailwind.css file, it builds everything and even these you don't even use or need. With this command, every build only these classes you need are going onto the config. 
                 3.	Tailwind.config.js
                     a. h
 

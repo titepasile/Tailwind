@@ -2,51 +2,82 @@
 @tailwind components;
 
 btn {
-    @apply px-4 py-2 bg-blue-600 text white rounded; 
+  @apply px-4 py-2 bg-blue-600 text white rounded; 
 }
 
-.my-grid{
-    color: #333333;
+/*
+.grid{
+  display: flexbox;
+  flex-direction: row;
+  color: #000000;
+  background-color: rgb(113, 66, 101);
+  border: 0.2rem solid black;
+  margin: 1rem;
+  box-sizing: border-box;
+  position: absolute;
 }
 
-/* Code from: https://codepen.io/dcode-software/pen/eYMYXrK */
-.copy-link {
-    --height: 36px;
-  
-    display: flex;
-    max-width: 250px;
-  }
-  
-  .copy-link-input {
-    flex-grow: 1;
-    padding: 0 8px;
-    font-size: 14px;
-    border: 1px solid #cccccc;
-    border-right: none;
-    outline: none;
-  }
-  
-  .copy-link-input:hover {
-    background: #eeeeee;
-  }
-  
-  .copy-link-button {
-    flex-shrink: 0;
-    width: var(--height);
-    height: var(--height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #dddddd;
-    color: #333333;
-    outline: none;
-    border: 1px solid #cccccc;
-    cursor: pointer;
-  }
-  
-  .copy-link-button:hover {
-    background: #cccccc;
-  }  
+.my-div{
+  @apply bg-red-300;
+}
+
+.topic{
+  margin: 0.1rem;
+}
+*/
+
+/* style.css */
+
+/* Global styles */
+body {
+
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Header styles */
+header {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/* Div styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 2rem;
+}
+
+.my-div {
+  border: 2px solid #000;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+/* Topic styles */
+.topic {
+  font-weight: bold;
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-style: italic;
+}
+
+/* Context styles */
+.context {
+  margin-top: 0;
+} 
 
 @tailwind utilities;
 
