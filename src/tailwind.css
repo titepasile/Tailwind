@@ -1,52 +1,53 @@
 @tailwind base;
 @tailwind components;
-
-btn {
-    @apply px-4 py-2 bg-blue-600 text white rounded; 
-}
-
-.my-grid{
-    color: #333333;
-}
-
-/* Code from: https://codepen.io/dcode-software/pen/eYMYXrK */
-.copy-link {
-    --height: 36px;
-  
-    display: flex;
-    max-width: 250px;
-  }
-  
-  .copy-link-input {
-    flex-grow: 1;
-    padding: 0 8px;
-    font-size: 14px;
-    border: 1px solid #cccccc;
-    border-right: none;
-    outline: none;
-  }
-  
-  .copy-link-input:hover {
-    background: #eeeeee;
-  }
-  
-  .copy-link-button {
-    flex-shrink: 0;
-    width: var(--height);
-    height: var(--height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #dddddd;
-    color: #333333;
-    outline: none;
-    border: 1px solid #cccccc;
-    cursor: pointer;
-  }
-  
-  .copy-link-button:hover {
-    background: #cccccc;
-  }  
-
 @tailwind utilities;
+
+/* style.css */
+
+/* Global styles */
+body {
+  @apply m-0, p-0, bg-cyan-950;
+}
+
+h1 {
+  @apply font-normal, mb-1;
+}
+
+p {
+  @apply mb-1;
+}
+
+/* Header styles */
+header {
+  @apply p-2, bg-cyan-100;
+}
+
+/* Div styles */
+.grid {
+  @apply grid grid-cols-2; 
+}
+
+.my-div {
+  @apply border-b-2, p-1, bg-zinc-950;
+}
+
+/* Topic styles */
+.topic {
+  @apply font-bold; 
+}
+
+/* Subtitle styles */
+.subtitle {
+  @apply font-light;
+}
+
+/* Context styles */
+.context {
+  @apply mt-0, pl-1;
+} 
+
+.link{
+  @apply text-blue-600; 
+}
+
 

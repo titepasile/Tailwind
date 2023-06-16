@@ -5,91 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="/src/tailwind.css">
+    <link rel="stylesheet" href="https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons&icon.query=copy">
 </head>
+
 <body>
     <header>
         <h1>Tailwind</h1>
         <h3>What is it and how can I use it?</h3>
     </header>
-    <div class="my-grid">
-        <div id="1">
-            <p>Setup</p>
-            <p>You don't have to use the exact same setup as I did. If you use another one you have to personalize the paths.</p>
-            <p>
-                a. Create two folders in you directory. 
-                b. Public folder with index.html and style.css file
-                c. Src folder with tailwind.css file
+    <div class="grid">
+        <div class="my-div">
+            <p class="topic">1 Setup</p>
+            <p class="subtitle">You don't have to use the exact same setup as I did. If you use another one you have to personalize the paths.</p>
+            <p class="context">
+                a. Create two folders in your directory.
+            </p>
+            <p class="context">
+                b. Public folder with index.html and style.css file.
+            </p>
+            <p class="context">
+                c. Src folder with tailwind.css file.
             </p>
         </div>
-        <div id="2">
-            <p>Package.json</p>
-            <p>
+        <div class="my-div">
+            <p class="topic">2 Package.json</p>
+            <p class="context">
                 a.	Make sure you are not in one of the created folders.
-                b.	Open the terminal and type: npm init -y
+            </p>
+            <p class="context">
+                b.	Open the terminal and type: npm init -y.
+            </p>
+            <p class="context">
                 c.	This command creates a package.json file in your directory.
             </p>
         </div>
-        <div id="3">
-            <p>Tailwind.css</p>
-            <p>a. Open your .css file in the src folder.</p>
-
-            <!--Code from: https://codepen.io/dcode-software/pen/eYMYXrK -->
-            <div class="copy-link">
-                <input type="text" class="copy-link-input" 
-                value="
-                @tailwind base;
-                @tailwind components;
-                
-                btn {
-                    @apply px-4 py-2 bg-blue-600 text white rounded; 
-                }
-                
-                @tailwind utilities;
-                " readonly>
-                <button type="button" class="copy-link-button">
-                  <span class="material-icons">copy</span>
-                </button>
-            </div>
-            
-            <p>
+        <div class="my-div">
+            <p class="topic">3 Tailwind.css</p>
+            <p class="context">
+                a. Open your .css file in the src folder.
+            </p>
+            <p class="context">
+                b. Copy the following code into the .css file:
+            </p>
+            <code>
+                @tailwind base; <br>
+                @tailwind components; <br>
+                <br>
+                btn { <br>
+                    @apply px-4 py-2 bg-blue-600 text white rounded; <br>
+                } <br>
+                @tailwind utilities;<br>
+            </code> 
+            <br>     
+            <p class="context">
                 c.	In here you can later create your own objects for your website. 
             </p>
         </div>
-        <div id="4">
-            <p>Package.json</p>
-            <p>
-                a. Go into your .json file and scroll down to "scripts"
-                b. Delete what's after and copy this: 
-                <pre>
-                    <code>
-                        "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./public/style.css"
-                    </code>
-                </pre>
-                c. Npx is almost the same as npm. With npm you run a command and it directly executes. With npx you must run the command in the terminal after you specified what it must do. 
+        <div class="my-div">
+            <p class="topic">4 Package.json</p>
+            <p class="context">
+                a. Go into your .json file and scroll down to "scripts".
+            </p>
+            <p class="context">
+                b. Delete what's after and copy this: <br> 
+                <code>
+                    "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./public/style.css" <br>
+                </code>
+                <br>
+            </p>
+            <p class="context">
+                c. Npx is almost the same as npm. With npm you run a command and it directly executes. With npx you must run the command in the terminal after you specified what it must do. <br>
+            </p>
+            <p class="context">
                 d. What this command does is that it installs the latest package of tailwindcss-cli and compiles the tailwind.css file in the src folder. After that it saves the output (-o) in the style.css file in the public folder. 
             </p>
         </div>
-        <div id="5">
-            <p>Run the npx command</p>
-            <p>
-                a.	Open your terminal again and make sure you are in the same direction as your package.json file. 
-                b.	Type: npm run dev. 
-                c.	I use dev because I “named” my command in the package.json file dev. If you used another name, you have to replace it. 
-                d.	Now open your output file. There should be round about 500 lines in it.
+        <div class="my-div">
+            <p class="topic">5 Run the npm command</p>
+            <p class="context">
+                a.	Open your terminal again and make sure you are in the same direction as your package.json file.
+            </p>
+            <p class="context">
+                b.	Type: <br>
+                npm run dev
+            </p>
+            <p class="context">
+                c.	I use dev because I “named” my command in the package.json file dev. If you used another name, you have to replace it.
+            </p>
+            <p class="context">
+                d.	Now open your output file. There should be around 500 lines in it.
             </p>
         </div>
-        <div id="6">
-            <p>How to use Tailwind in my code</p>
-            <p>
-                1.	Now you can specify your own classes in the tailwind.css file to use them in your html or style.css code. I am going to explain later how exactly this works but first we have to make something else that is going to make the work with tailwind easier. 
-                2.	Tailwind config 
-                    a.	Type this command in the terminal: npx tailwindcss-cli@latest init
-                    b.	This command creates a config file. We need it because: 
-                    Every time you make a new css class in your tailwind.css file you would have to reenter the command from before that compiles the file and saves everything in the style.css file. To avoid that, we are going to automate that process. 
-                3.	Tailwind.config.js
-                    a. h
-
+        <div class="my-div">
+            <p class="topic">
+                6 Tailwind config
+            </p>
+            <p class="context">
+                a. Type this command in the terminal: npx tailwindcss-cli@latest init
+            </p>
+            <p class="context">
+                b. This command creates a config file. We need it because: <br>
+                Every time you build to make a new css class in your tailwind.css file, it builds every tailwind class and even those you don't use. That means that our .css file is very big. To prevent that we need to create this config file.                
+            </p>
+        </div>
+        <div class="my-div">
+            <p class="topic">
+                7 tailwind.config.js
+            </p>
+            <p class="context">
+                a.	Open the new file and replace the content with the following: <br>
+                <code>
+                    module.exports = { <br>
+                        purge: [ <br>
+                          //This searches in all .html files for classes we use <br>
+                          './public/*.html' <br>
+                        ], <br>
+                        darkMode: false, // or 'media' or 'class' <br>
+                        theme: { <br>
+                          extend: {}, <br>
+                        }, <br>
+                        variants: { <br>
+                          extend: {}, <br>
+                        }, <br>
+                        plugins: [], <br>
+                    } <br>                      
+                </code>
+            </p>
+            <p class="context">
+                b.	Now go into the package.json file and open the terminal. Copy this: <br>
+                npm install cross-env
+            </p>
+            <p class="context">
+                c.	Add this under your "dev". I would call that one the same, because this line is important for our build:
+                <code>
+                    "build": "cross-env NODE_ENV=production npx tailwindcss-cli@latest build -i ./src/tailwind.css -o ./public/style.css"
+                </code>
+            </p>
+            <p class="context">
+                d.	Now run the new code with:  <br>
+                npm run build
+            </p>
+            <p class="context">
+                e.	Now we have created a productive build. 
+            </p>
+            <p class="context">
+                <a class="link" href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss ">I recommend this extension</a>
+            </p>
+        </div>
+        <div class="my-div">
+            <p class="topic">How to use Tailwind in my code</p>
+            <p class="context">
+                1. Create a class in your tailwind.css file. <br>
+                2. Run the npm run dev and the npm run build command. <br>
+                3. Use your created class in your HTML file. <br>
+                4. Done :)
             </p>
         </div>
     </div>
