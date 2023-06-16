@@ -1,62 +1,53 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
-btn {
-  @apply px-4 py-2 bg-blue-600 text white rounded; 
-}
 /* style.css */
 
 /* Global styles */
 body {
-
-  margin: 0;
-  padding: 0;
+  @apply m-0, p-0;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  @apply font-normal, mb-1;
 }
 
 p {
-  margin-bottom: 1rem;
+  @apply mb-1;
 }
 
 /* Header styles */
 header {
-  padding: 2rem;
-  background-color: #fff;
+  @apply p-2, bg-cyan-100;
 }
 
 /* Div styles */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  margin: 2rem;
+  @apply grid grid-cols-2; 
 }
 
 .my-div {
-  border: 2px solid #000;
-  padding: 1rem;
-  background-color: #fff;
+  @apply border-b-2, p-1, bg-zinc-950;
 }
 
 /* Topic styles */
 .topic {
-  font-weight: bold;
+  @apply font-bold; 
 }
 
 /* Subtitle styles */
 .subtitle {
-  font-style: italic;
+  @apply font-light;
 }
 
 /* Context styles */
 .context {
-  margin-top: 0;
-  padding-left: 1rem;
+  @apply mt-0, pl-1;
 } 
 
-@tailwind utilities;
+.link{
+  @apply text-blue-600; 
+}
+
 
